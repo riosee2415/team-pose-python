@@ -42,9 +42,12 @@ DJANGO_APPS = [
 PROJECT_APPS = [
     "members.apps.MembersConfig",
     "portpolios.apps.PortpoliosConfig",
+    "doc_boards.apps.DocBoardsConfig",
 ]
 
-INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
+PART_APPS = []
+
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + PART_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
