@@ -46,7 +46,9 @@ PROJECT_APPS = [
     "doc_boards.apps.DocBoardsConfig",
 ]
 
-PART_APPS = []
+PART_APPS = [
+    "django_seed",
+]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + PART_APPS
 
