@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
-def all_member_views(request):
-    return HttpResponse("<h1>Hello World</h1>")
+def member_list_view_handler(request):
+    return render(request, "screens/member_list.html")
