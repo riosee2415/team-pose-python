@@ -29,6 +29,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TAILWIND_APP_NAME = "theme_team"
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
 
 # Application definition
 
@@ -49,6 +55,9 @@ PROJECT_APPS = [
 
 PART_APPS = [
     "django_seed",
+    "tailwind",
+    "theme_team",
+    "fontawesome_5",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + PART_APPS
@@ -68,7 +77,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "DIRS": [os.path.join(BASE_DIR, "theme_team/templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -119,7 +128,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
