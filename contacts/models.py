@@ -3,7 +3,10 @@ from django.db import models
 
 class ContactFileModel(models.Model):
 
-    file = models.FileField()
+    file = models.ImageField()
+    contact = models.ForeignKey(
+        "ContactModel", related_name="contacts", on_delete=models.CASCADE
+    )
 
 
 class ContactModel(models.Model):
@@ -15,10 +18,6 @@ class ContactModel(models.Model):
     contents = models.TextField()
 
     created = models.DateField(auto_now_add=True)
-
-    files = models.ForeignKey(
-        "ContactFileModel", related_name="contact", on_delete=models.CASCADE
-    )
 
     def __str__(self):
         return f"{self.name}-{self.created}"
