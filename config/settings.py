@@ -51,6 +51,7 @@ PROJECT_APPS = [
     "members.apps.MembersConfig",
     "portpolios.apps.PortpoliosConfig",
     "doc_boards.apps.DocBoardsConfig",
+    "contacts.apps.ContactsConfig",
 ]
 
 PART_APPS = [
